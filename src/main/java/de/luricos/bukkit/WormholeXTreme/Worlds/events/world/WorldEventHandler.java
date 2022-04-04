@@ -44,9 +44,8 @@ public class WorldEventHandler implements Listener {
      */
     @EventHandler(priority = EventPriority.HIGH)
     public void onChunkUnload(final ChunkUnloadEvent event) {
-        if (!event.isCancelled() && (event.getChunk() != null) && ChunkUnload.handleChunkUnload(event.getChunk())) {
-            event.setCancelled(true);
-            WXLogger.prettyLog(Level.FINE, false, "Chunk Unload Cancelled: " + event.getChunk().toString() + " World: " + event.getWorld().getName());
+        if ((event.getChunk() != null) && ChunkUnload.handleChunkUnload(event.getChunk())) {
+            WXLogger.prettyLog(Level.FINE, false, "Chunk Unload NOT Cancelled (THIS MAY BREAK): " + event.getChunk().toString() + " World: " + event.getWorld().getName());
         }
     }
 

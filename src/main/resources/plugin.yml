@@ -5,7 +5,7 @@ authors: [alron, lycano]
 softdepend: [PermissionsEx, Help]
 description: >
              Wormhole X-Treme Worlds! World management for Wormhole X-Treme!
-             
+api-version: "1.13"
 commands:
   wxw:
     description: Manage Worlds via Wormhole X-Treme Worlds

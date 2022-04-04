@@ -48,10 +48,8 @@ public class BlockFromTo {
             if (blockType != null) {
                 switch (blockType) {
                     case WATER:
-                    case STATIONARY_WATER:
                         return !wormholeWorld.isWorldAllowWaterSpread();
                     case LAVA:
-                    case STATIONARY_LAVA:
                         return !wormholeWorld.isWorldAllowLavaSpread();
                     default:
                         break;
